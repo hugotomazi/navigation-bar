@@ -7,4 +7,5 @@ const NavigationBar = registerPlugin<NavigationBarPlugin>('NavigationBar', {
 });
 
 export * from './definitions';
+export * from './navigationbar.events'
 export { NavigationBar };
