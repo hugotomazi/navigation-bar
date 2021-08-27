@@ -1,6 +1,6 @@
 {
     "name": "@hugotomazi/capacitor-navigation-bar",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Capacitor Plugin for Navigation Bar",
     "main": "dist/plugin.cjs.js",
     "module": "dist/esm/index.js",
@@ -18,10 +18,10 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/hugotomazi/navigationbar-bar.git"
+        "url": "git+https://github.com/hugotomazi/navigation-bar.git"
     },
     "bugs": {
-        "url": "https://github.com/hugotomazi/navigationbar-bar/issues"
+        "url": "https://github.com/hugotomazi/navigation-bar/issues"
     },
     "keywords": [
         "capacitor",
