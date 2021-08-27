@@ -1,5 +1,5 @@
 {
-    "name": "@capacitor-community/navigation-bar",
+    "name": "@hugotomazi/navigation-bar",
     "version": "0.1.0",
     "description": "Capacitor Plugin for Navigation Bar",
     "main": "dist/plugin.cjs.js",
