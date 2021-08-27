@@ -1,5 +1,5 @@
 {
-    "name": "@hugotomazi/navigation-bar",
+    "name": "@hugotomazi/capacitor-navigation-bar",
     "version": "1.0.0",
     "description": "Capacitor Plugin for Navigation Bar",
     "main": "dist/plugin.cjs.js",
@@ -18,10 +18,10 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/hugotomazi/ionic-navigationbar.git"
+        "url": "git+https://github.com/hugotomazi/navigationbar-bar.git"
     },
     "bugs": {
-        "url": "https://github.com/hugotomazi/ionic-navigationbar/issues"
+        "url": "https://github.com/hugotomazi/navigationbar-bar/issues"
     },
     "keywords": [
         "capacitor",

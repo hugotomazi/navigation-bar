@@ -1,6 +1,6 @@
 <p align="center"><br><img src="https://user-images.githubusercontent.com/236501/85893648-1c92e880-b7a8-11ea-926d-95355b8175c7.png" width="128" height="128" /></p>
 <h3 align="center">Navigation Bar</h3>
-<p align="center"><strong><code>@hugotomazi/navigation-bar</code></strong></p>
+<p align="center"><strong><code>@hugotomazi/capacitor-navigation-bar</code></strong></p>
 <p align="center">
   Capacitor plugin for Navigation Bar manipulation.
 </p>
@@ -27,7 +27,7 @@
 ## Install
 
 ```bash
-npm install @hugotomazi/navigation-bar
+npm install @hugotomazi/capacitor-navigation-bar
 npx cap sync
 ```
 
