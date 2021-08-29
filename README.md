@@ -16,6 +16,10 @@
 <a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
+<br/>
+<p align="center">
+  <img height="450" src="https://github.com/hugotomazi/navigation-bar/blob/master/demoProject/src/assets/example.gif?raw=true">
+</p>
 
 ## Maintainers
 
@@ -39,15 +43,22 @@ No configuration required for this plugin.
 
 <docgen-index>
 
-* [`show()`](#show)
-* [`hide()`](#hide)
-* [`setColor(...)`](#setcolor)
-* [`getColor()`](#getcolor)
-* [`addListener(...)`](#addlistener)
-* [`addListener(...)`](#addlistener)
-* [`addListener(...)`](#addlistener)
-* [Interfaces](#interfaces)
-* [Enums](#enums)
+- [Maintainers](#maintainers)
+- [Install](#install)
+- [Configuration](#configuration)
+- [API](#api)
+  - [show()](#show)
+  - [hide()](#hide)
+  - [setColor(...)](#setcolor)
+  - [getColor()](#getcolor)
+  - [addListener(...)](#addlistener)
+  - [addListener(...)](#addlistener-1)
+  - [addListener(...)](#addlistener-2)
+  - [Interfaces](#interfaces)
+    - [ColorParameters](#colorparameters)
+    - [PluginListenerHandle](#pluginlistenerhandle)
+  - [Enums](#enums)
+    - [NavigationBarPluginEvents](#navigationbarpluginevents)
 
 </docgen-index>
 
