@@ -43,22 +43,15 @@ No configuration required for this plugin.
 
 <docgen-index>
 
-- [Maintainers](#maintainers)
-- [Install](#install)
-- [Configuration](#configuration)
-- [API](#api)
-  - [show()](#show)
-  - [hide()](#hide)
-  - [setColor(...)](#setcolor)
-  - [getColor()](#getcolor)
-  - [addListener(...)](#addlistener)
-  - [addListener(...)](#addlistener-1)
-  - [addListener(...)](#addlistener-2)
-  - [Interfaces](#interfaces)
-    - [ColorParameters](#colorparameters)
-    - [PluginListenerHandle](#pluginlistenerhandle)
-  - [Enums](#enums)
-    - [NavigationBarPluginEvents](#navigationbarpluginevents)
+* [`show()`](#show)
+* [`hide()`](#hide)
+* [`setColor(...)`](#setcolor)
+* [`getColor()`](#getcolor)
+* [`addListener(...)`](#addlistener)
+* [`addListener(...)`](#addlistener)
+* [`addListener(...)`](#addlistener)
+* [Interfaces](#interfaces)
+* [Enums](#enums)
 
 </docgen-index>
 
