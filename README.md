@@ -46,6 +46,7 @@ No configuration required for this plugin.
 * [`show()`](#show)
 * [`hide()`](#hide)
 * [`setColor(...)`](#setcolor)
+* [`setTransparency(...)`](#settransparency)
 * [`getColor()`](#getcolor)
 * [`addListener(...)`](#addlistener)
 * [`addListener(...)`](#addlistener)
@@ -91,10 +92,28 @@ setColor(options: ColorParameters) => any
 ```
 
 Change the color of the navigation bar.
+*Support alpha hexadecimal numbers.
 
 | Param         | Type                                                        |
 | ------------- | ----------------------------------------------------------- |
 | **`options`** | <code><a href="#colorparameters">ColorParameters</a></code> |
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### setTransparency(...)
+
+```typescript
+setTransparency(options: { isTransparent: boolean; }) => any
+```
+
+Set the Transparency
+
+| Param         | Type                                     |
+| ------------- | ---------------------------------------- |
+| **`options`** | <code>{ isTransparent: boolean; }</code> |
 
 **Returns:** <code>any</code>
 

@@ -24,6 +24,13 @@ export class NavigationBarWeb extends WebPlugin implements NavigationBarPlugin {
     })
   }
 
+  async setTransparency(options: { isTransparent: boolean }): Promise<void> {
+    return new Promise<void>((resolve) => {
+      console.log(`Navigation Bar is transparent: ${options.isTransparent ? 'YES' : 'NO'}`)
+      resolve()
+    })
+  }
+
   async getColor(): Promise<{ color: string }> {
     return new Promise<{ color: string }>((resolve) => {
       resolve({ color: '#FFFFFF' })
