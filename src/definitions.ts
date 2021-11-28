@@ -19,6 +19,12 @@ export interface NavigationBarPlugin {
   setColor(options: ColorParameters): Promise<void>
 
   /**
+   * Set the Transparency
+   * @param isTransparent 
+   */
+  setTransparency(options: { isTransparent: boolean }): Promise<void>
+
+  /**
    * Gets the current color of the navigation bar in Hexadecimal.
    */
   getColor(): Promise<{ color: string }>

@@ -30,6 +30,7 @@ public class NavigationBarPlugin extends Plugin {
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
                     Window window = getActivity().getWindow();
                     View view = window.getDecorView();
+
                     int options = view.getSystemUiVisibility() | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
 
                     view.setSystemUiVisibility(options);
@@ -38,7 +39,7 @@ public class NavigationBarPlugin extends Plugin {
                     notifyListeners("onHide", new JSObject());
                     call.resolve();
                 } else {
-                    call.unavailable("Not available on Android API 14 or earlier.");
+                    call.unavailable("Not available on Android API 13 or earlier.");
                 }
             }
         });
@@ -60,7 +61,29 @@ public class NavigationBarPlugin extends Plugin {
                     notifyListeners("onShow", new JSObject());
                     call.resolve();
                 } else {
-                    call.unavailable("Not available on Android API 14 or earlier.");
+                    call.unavailable("Not available on Android API 13 or earlier.");
+                }
+            }
+        });
+    }
+
+    @PluginMethod
+    public void setTransparency(PluginCall call) {
+        this.getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    Boolean isTransparent = call.getBoolean("isTransparent");
+                    Window window = getActivity().getWindow();
+                    if(isTransparent) {
+                        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                    } else {
+                        window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                    }
+
+                    call.resolve();
+                } else {
+                    call.unavailable("Not available on Android API 18 or earlier.");
                 }
             }
         });
@@ -99,7 +122,11 @@ public class NavigationBarPlugin extends Plugin {
 
                     window.getDecorView().setSystemUiVisibility(options);
                     window.setNavigationBarColor(Color.parseColor(color));
-                    String newColor = String.format("#%06X", (0xFFFFFF & window.getNavigationBarColor()));
+                    String newColor = String.format("#%08X", (0xFFFFFFFF & window.getNavigationBarColor()));
+
+                    if(newColor.contains("#FF")) {
+                        newColor = newColor.replace("#FF", "#");
+                    }
 
                     JSObject ret = new JSObject();
                     ret.put("color", newColor);
@@ -107,17 +134,20 @@ public class NavigationBarPlugin extends Plugin {
 
                     call.resolve();
                 } else {
-                    call.unavailable("Not available on Android API 21 or earlier.");
+                    call.unavailable("Not available on Android API 20 or earlier.");
                 }
             }
 
+            /*
+            * Support Hex values with alpha and without alpha
+            * */
             private boolean validateHexColor(String color) {
                 if (color == null || color.isEmpty()) {
                     return false;
                 }
 
-                Pattern pattern = Pattern.compile("^#([A-Fa-f0-9]{6})$");
-                return pattern.matcher(color).matches();
+                Pattern hexPattern = Pattern.compile("^#([A-Fa-f0-9]{6})$|^#([A-Fa-f0-9]{8})$");
+                return hexPattern.matcher(color).matches();
             }
         });
     }
@@ -129,13 +159,17 @@ public class NavigationBarPlugin extends Plugin {
             public void run() {
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     Window window = getActivity().getWindow();
-                    String color = String.format("#%06X", (0xFFFFFF & window.getNavigationBarColor()));
+                    String color = String.format("#%08X", (0xFFFFFFFF & window.getNavigationBarColor()));
+
+                    if(color.contains("#FF")) {
+                        color = color.replace("#FF", "#");
+                    }
 
                     JSObject colorObject = new JSObject();
                     colorObject.put("color", color);
                     call.resolve(colorObject);
                 } else {
-                    call.unavailable("Not available on Android API 21 or earlier.");
+                    call.unavailable("Not available on Android API 20 or earlier.");
                 }
             }
         });
