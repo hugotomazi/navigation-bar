@@ -1,6 +1,6 @@
 {
     "name": "@hugotomazi/capacitor-navigation-bar",
-    "version": "1.0.4",
+    "version": "1.1.0",
     "description": "Capacitor Plugin for Navigation Bar",
     "main": "dist/plugin.cjs.js",
     "module": "dist/esm/index.js",
