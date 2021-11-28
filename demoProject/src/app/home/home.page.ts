@@ -8,6 +8,7 @@ import { NavigationBar, NavigationBarPluginEvents } from 'navigation-bar';
 export class HomePage {
   currentColor: string
   currentStatus: string
+  isTransparent: boolean = false
   constructor() {}
 
   ngAfterViewInit() {
@@ -40,7 +41,12 @@ export class HomePage {
   changeNavigationBarColor() {
     NavigationBar.setColor({ color: '#FF0000', darkButtons: true })
     setTimeout(() => {
-       NavigationBar.setColor({ color: '#008000' })
+       NavigationBar.setColor({ color: '#44008000' })
     }, 3000)
+  }
+
+  setTransparentBackground() {
+    this.isTransparent = !this.isTransparent
+    NavigationBar.setTransparency({ isTransparent: this.isTransparent }) 
   }
 }
