@@ -48,9 +48,9 @@ No configuration required for this plugin.
 * [`setColor(...)`](#setcolor)
 * [`setTransparency(...)`](#settransparency)
 * [`getColor()`](#getcolor)
-* [`addListener(...)`](#addlistener)
-* [`addListener(...)`](#addlistener)
-* [`addListener(...)`](#addlistener)
+* [`addListener(NavigationBarPluginEvents.SHOW, ...)`](#addlistenernavigationbarplugineventsshow)
+* [`addListener(NavigationBarPluginEvents.HIDE, ...)`](#addlistenernavigationbarplugineventshide)
+* [`addListener(NavigationBarPluginEvents.COLOR_CHANGE, ...)`](#addlistenernavigationbarplugineventscolor_change)
 * [Interfaces](#interfaces)
 * [Enums](#enums)
 
@@ -62,12 +62,10 @@ No configuration required for this plugin.
 ### show()
 
 ```typescript
-show() => any
+show() => Promise<void>
 ```
 
 Display the navigation bar.
-
-**Returns:** <code>any</code>
 
 --------------------
 
@@ -75,12 +73,10 @@ Display the navigation bar.
 ### hide()
 
 ```typescript
-hide() => any
+hide() => Promise<void>
 ```
 
 Hide the navigation bar.
-
-**Returns:** <code>any</code>
 
 --------------------
 
@@ -88,7 +84,7 @@ Hide the navigation bar.
 ### setColor(...)
 
 ```typescript
-setColor(options: ColorParameters) => any
+setColor(options: ColorParameters) => Promise<void>
 ```
 
 Change the color of the navigation bar.
@@ -98,15 +94,13 @@ Change the color of the navigation bar.
 | ------------- | ----------------------------------------------------------- |
 | **`options`** | <code><a href="#colorparameters">ColorParameters</a></code> |
 
-**Returns:** <code>any</code>
-
 --------------------
 
 
 ### setTransparency(...)
 
 ```typescript
-setTransparency(options: { isTransparent: boolean; }) => any
+setTransparency(options: { isTransparent: boolean; }) => Promise<void>
 ```
 
 Set the Transparency
@@ -115,25 +109,23 @@ Set the Transparency
 | ------------- | ---------------------------------------- |
 | **`options`** | <code>{ isTransparent: boolean; }</code> |
 
-**Returns:** <code>any</code>
-
 --------------------
 
 
 ### getColor()
 
 ```typescript
-getColor() => any
+getColor() => Promise<{ color: string; }>
 ```
 
 Gets the current color of the navigation bar in Hexadecimal.
 
-**Returns:** <code>any</code>
+**Returns:** <code>Promise&lt;{ color: string; }&gt;</code>
 
 --------------------
 
 
-### addListener(...)
+### addListener(NavigationBarPluginEvents.SHOW, ...)
 
 ```typescript
 addListener(event: NavigationBarPluginEvents.SHOW, listenerFunc: () => void) => PluginListenerHandle
@@ -151,7 +143,7 @@ Event fired after navigation bar is displayed
 --------------------
 
 
-### addListener(...)
+### addListener(NavigationBarPluginEvents.HIDE, ...)
 
 ```typescript
 addListener(event: NavigationBarPluginEvents.HIDE, listenerFunc: () => void) => PluginListenerHandle
@@ -169,7 +161,7 @@ Event fired after navigation bar is hidden
 --------------------
 
 
-### addListener(...)
+### addListener(NavigationBarPluginEvents.COLOR_CHANGE, ...)
 
 ```typescript
 addListener(event: NavigationBarPluginEvents.COLOR_CHANGE, listenerFunc: (returnObject: { color: string; }) => void) => PluginListenerHandle
@@ -200,9 +192,9 @@ Event fired after navigation bar color is changed
 
 #### PluginListenerHandle
 
-| Prop         | Type                      |
-| ------------ | ------------------------- |
-| **`remove`** | <code>() =&gt; any</code> |
+| Prop         | Type                                      |
+| ------------ | ----------------------------------------- |
+| **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
 
 
 ### Enums
