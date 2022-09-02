@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
   <a href="https://github.com/hugotomazi/navigation-bar/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/hugotomazi/navigation-bar/CI/master?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@hugotomazi/capacitor-navigation-bar"><img src="https://img.shields.io/npm/l/@hugotomazi/capacitor-navigation-bar?style=flat-square" /></a>
 <br>
@@ -62,12 +62,10 @@ No configuration required for this plugin.
 ### show()
 
 ```typescript
-show() => any
+show() => Promise<void>
 ```
 
 Display the navigation bar.
-
-**Returns:** <code>any</code>
 
 --------------------
 
@@ -75,12 +73,10 @@ Display the navigation bar.
 ### hide()
 
 ```typescript
-hide() => any
+hide() => Promise<void>
 ```
 
 Hide the navigation bar.
-
-**Returns:** <code>any</code>
 
 --------------------
 
@@ -88,7 +84,7 @@ Hide the navigation bar.
 ### setColor(...)
 
 ```typescript
-setColor(options: ColorParameters) => any
+setColor(options: ColorParameters) => Promise<void>
 ```
 
 Change the color of the navigation bar.
@@ -98,15 +94,13 @@ Change the color of the navigation bar.
 | ------------- | ----------------------------------------------------------- |
 | **`options`** | <code><a href="#colorparameters">ColorParameters</a></code> |
 
-**Returns:** <code>any</code>
-
 --------------------
 
 
 ### setTransparency(...)
 
 ```typescript
-setTransparency(options: { isTransparent: boolean; }) => any
+setTransparency(options: { isTransparent: boolean; }) => Promise<void>
 ```
 
 Set the Transparency
@@ -115,20 +109,18 @@ Set the Transparency
 | ------------- | ---------------------------------------- |
 | **`options`** | <code>{ isTransparent: boolean; }</code> |
 
-**Returns:** <code>any</code>
-
 --------------------
 
 
 ### getColor()
 
 ```typescript
-getColor() => any
+getColor() => Promise<{ color: string; }>
 ```
 
 Gets the current color of the navigation bar in Hexadecimal.
 
-**Returns:** <code>any</code>
+**Returns:** <code>Promise&lt;{ color: string; }&gt;</code>
 
 --------------------
 
@@ -200,9 +192,9 @@ Event fired after navigation bar color is changed
 
 #### PluginListenerHandle
 
-| Prop         | Type                      |
-| ------------ | ------------------------- |
-| **`remove`** | <code>() =&gt; any</code> |
+| Prop         | Type                                      |
+| ------------ | ----------------------------------------- |
+| **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
 
 
 ### Enums

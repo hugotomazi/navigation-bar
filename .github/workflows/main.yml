@@ -9,6 +9,7 @@ on:
 
 env:
   NODE_VERSION: 14
+  JDK_VERSION: 11
 
 jobs:
   build:
@@ -21,6 +22,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
+      - name: Setup Java JDK  ${{ env.JDK_VERSION }}
+        uses: actions/setup-java@v3.4.1
+        with:
+          # The Java version to set up. Takes a whole or semver Java version. See examples of supported syntax in README file
+          java-version: ${{ env.JDK_VERSION }}
+          # Java distribution. See the list of supported distributions in README file
+          distribution: 'temurin'
+
       - name: Install dependencies
         run: npm ci
       - name: Build iOS
