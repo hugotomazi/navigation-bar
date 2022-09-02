@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
   <a href="https://github.com/hugotomazi/navigation-bar/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/hugotomazi/navigation-bar/CI/master?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@hugotomazi/capacitor-navigation-bar"><img src="https://img.shields.io/npm/l/@hugotomazi/capacitor-navigation-bar?style=flat-square" /></a>
 <br>
@@ -48,9 +48,9 @@ No configuration required for this plugin.
 * [`setColor(...)`](#setcolor)
 * [`setTransparency(...)`](#settransparency)
 * [`getColor()`](#getcolor)
-* [`addListener(NavigationBarPluginEvents.SHOW, ...)`](#addlistenernavigationbarplugineventsshow)
-* [`addListener(NavigationBarPluginEvents.HIDE, ...)`](#addlistenernavigationbarplugineventshide)
-* [`addListener(NavigationBarPluginEvents.COLOR_CHANGE, ...)`](#addlistenernavigationbarplugineventscolor_change)
+* [`addListener(...)`](#addlistener)
+* [`addListener(...)`](#addlistener)
+* [`addListener(...)`](#addlistener)
 * [Interfaces](#interfaces)
 * [Enums](#enums)
 
@@ -125,7 +125,7 @@ Gets the current color of the navigation bar in Hexadecimal.
 --------------------
 
 
-### addListener(NavigationBarPluginEvents.SHOW, ...)
+### addListener(...)
 
 ```typescript
 addListener(event: NavigationBarPluginEvents.SHOW, listenerFunc: () => void) => PluginListenerHandle
@@ -143,7 +143,7 @@ Event fired after navigation bar is displayed
 --------------------
 
 
-### addListener(NavigationBarPluginEvents.HIDE, ...)
+### addListener(...)
 
 ```typescript
 addListener(event: NavigationBarPluginEvents.HIDE, listenerFunc: () => void) => PluginListenerHandle
@@ -161,7 +161,7 @@ Event fired after navigation bar is hidden
 --------------------
 
 
-### addListener(NavigationBarPluginEvents.COLOR_CHANGE, ...)
+### addListener(...)
 
 ```typescript
 addListener(event: NavigationBarPluginEvents.COLOR_CHANGE, listenerFunc: (returnObject: { color: string; }) => void) => PluginListenerHandle
