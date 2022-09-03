@@ -15,7 +15,14 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+<br/>
+<form action="https://www.paypal.com/donate" method="post" target="_top" style="text-align: center">
+<input type="hidden" name="hosted_button_id" value="F9VPVZKHK4SZW" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
+</form>
 </p>
+
 <br/>
 <p align="center">
   <img height="450" src="https://github.com/hugotomazi/navigation-bar/blob/master/demoProject/src/assets/example.gif?raw=true">
@@ -43,16 +50,23 @@ No configuration required for this plugin.
 
 <docgen-index>
 
-* [`show()`](#show)
-* [`hide()`](#hide)
-* [`setColor(...)`](#setcolor)
-* [`setTransparency(...)`](#settransparency)
-* [`getColor()`](#getcolor)
-* [`addListener(...)`](#addlistener)
-* [`addListener(...)`](#addlistener)
-* [`addListener(...)`](#addlistener)
-* [Interfaces](#interfaces)
-* [Enums](#enums)
+- [Maintainers](#maintainers)
+- [Install](#install)
+- [Configuration](#configuration)
+- [API](#api)
+  - [show()](#show)
+  - [hide()](#hide)
+  - [setColor(...)](#setcolor)
+  - [setTransparency(...)](#settransparency)
+  - [getColor()](#getcolor)
+  - [addListener(...)](#addlistener)
+  - [addListener(...)](#addlistener-1)
+  - [addListener(...)](#addlistener-2)
+  - [Interfaces](#interfaces)
+    - [ColorParameters](#colorparameters)
+    - [PluginListenerHandle](#pluginlistenerhandle)
+  - [Enums](#enums)
+    - [NavigationBarPluginEvents](#navigationbarpluginevents)
 
 </docgen-index>
 
