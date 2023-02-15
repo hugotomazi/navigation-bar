@@ -7,6 +7,8 @@ import android.app.Activity;
 import android.view.Window;
 import android.view.WindowManager;
 
+import androidx.core.view.WindowCompat;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -76,7 +78,13 @@ public class NavigationBarPlugin extends Plugin {
                     Boolean isTransparent = call.getBoolean("isTransparent");
                     Window window = getActivity().getWindow();
                     if(isTransparent) {
-                        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                            WindowCompat.setDecorFitsSystemWindows(window, false);
+                            window.setNavigationBarColor(Color.TRANSPARENT);
+                            window.setNavigationBarContrastEnforced(false);
+                        } else {
+                            window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                        }
                     } else {
                         window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
                     }
