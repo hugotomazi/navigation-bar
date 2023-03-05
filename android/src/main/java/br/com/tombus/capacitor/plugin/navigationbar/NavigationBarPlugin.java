@@ -7,6 +7,9 @@ import android.app.Activity;
 import android.view.Window;
 import android.view.WindowManager;
 
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -112,15 +115,10 @@ public class NavigationBarPlugin extends Plugin {
                     }
 
                     Window window = getActivity().getWindow();
-                    int options = window.getDecorView().getSystemUiVisibility() | WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS;
+                    WindowInsetsControllerCompat windowInsetsControllerCompat = WindowCompat.getInsetsController(window, window.getDecorView());
 
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && darkButtons) {
-                        options |= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-                    } else {
-                        options &= ~View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-                    }
+                    windowInsetsControllerCompat.setAppearanceLightNavigationBars(!darkButtons);
 
-                    window.getDecorView().setSystemUiVisibility(options);
                     window.setNavigationBarColor(Color.parseColor(color));
                     String newColor = String.format("#%08X", (0xFFFFFFFF & window.getNavigationBarColor()));
 
