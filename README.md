@@ -13,7 +13,7 @@
   <a href="https://www.npmjs.com/package/@hugotomazi/capacitor-navigation-bar"><img src="https://img.shields.io/npm/dw/@hugotomazi/capacitor-navigation-bar?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@hugotomazi/capacitor-navigation-bar"><img src="https://img.shields.io/npm/v/@hugotomazi/capacitor-navigation-bar?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
+<a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-5-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <br/>
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F9VPVZKHK4SZW">
