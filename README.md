@@ -6,14 +6,14 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2023?style=flat-square" />
   <a href="https://github.com/hugotomazi/navigation-bar/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/hugotomazi/navigation-bar/CI/master?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@hugotomazi/capacitor-navigation-bar"><img src="https://img.shields.io/npm/l/@hugotomazi/capacitor-navigation-bar?style=flat-square" /></a>
 <br>
   <a href="https://www.npmjs.com/package/@hugotomazi/capacitor-navigation-bar"><img src="https://img.shields.io/npm/dw/@hugotomazi/capacitor-navigation-bar?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@hugotomazi/capacitor-navigation-bar"><img src="https://img.shields.io/npm/v/@hugotomazi/capacitor-navigation-bar?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
+<a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-5-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <br/>
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F9VPVZKHK4SZW">
@@ -47,23 +47,16 @@ No configuration required for this plugin.
 
 <docgen-index>
 
-- [Maintainers](#maintainers)
-- [Install](#install)
-- [Configuration](#configuration)
-- [API](#api)
-  - [show()](#show)
-  - [hide()](#hide)
-  - [setColor(...)](#setcolor)
-  - [setTransparency(...)](#settransparency)
-  - [getColor()](#getcolor)
-  - [addListener(...)](#addlistener)
-  - [addListener(...)](#addlistener-1)
-  - [addListener(...)](#addlistener-2)
-  - [Interfaces](#interfaces)
-    - [ColorParameters](#colorparameters)
-    - [PluginListenerHandle](#pluginlistenerhandle)
-  - [Enums](#enums)
-    - [NavigationBarPluginEvents](#navigationbarpluginevents)
+* [`show()`](#show)
+* [`hide()`](#hide)
+* [`setColor(...)`](#setcolor)
+* [`setTransparency(...)`](#settransparency)
+* [`getColor()`](#getcolor)
+* [`addListener(...)`](#addlistener)
+* [`addListener(...)`](#addlistener)
+* [`addListener(...)`](#addlistener)
+* [Interfaces](#interfaces)
+* [Enums](#enums)
 
 </docgen-index>
 
