@@ -132,7 +132,7 @@ Gets the current color of the navigation bar in Hexadecimal.
 ### addListener(...)
 
 ```typescript
-addListener(event: NavigationBarPluginEvents.SHOW, listenerFunc: () => void) => PluginListenerHandle
+addListener(event: NavigationBarPluginEvents.SHOW, listenerFunc: () => void) => Promise<PluginListenerHandle>
 ```
 
 Event fired after navigation bar is displayed
@@ -142,7 +142,7 @@ Event fired after navigation bar is displayed
 | **`event`**        | <code><a href="#navigationbarpluginevents">NavigationBarPluginEvents.SHOW</a></code> | The event   |
 | **`listenerFunc`** | <code>() =&gt; void</code>                                                           | Callback    |
 
-**Returns:** <code><a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
 
 --------------------
 
@@ -150,7 +150,7 @@ Event fired after navigation bar is displayed
 ### addListener(...)
 
 ```typescript
-addListener(event: NavigationBarPluginEvents.HIDE, listenerFunc: () => void) => PluginListenerHandle
+addListener(event: NavigationBarPluginEvents.HIDE, listenerFunc: () => void) => Promise<PluginListenerHandle>
 ```
 
 Event fired after navigation bar is hidden
@@ -160,7 +160,7 @@ Event fired after navigation bar is hidden
 | **`event`**        | <code><a href="#navigationbarpluginevents">NavigationBarPluginEvents.HIDE</a></code> | The event   |
 | **`listenerFunc`** | <code>() =&gt; void</code>                                                           | Callback    |
 
-**Returns:** <code><a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
 
 --------------------
 
@@ -168,7 +168,7 @@ Event fired after navigation bar is hidden
 ### addListener(...)
 
 ```typescript
-addListener(event: NavigationBarPluginEvents.COLOR_CHANGE, listenerFunc: (returnObject: { color: string; }) => void) => PluginListenerHandle
+addListener(event: NavigationBarPluginEvents.COLOR_CHANGE, listenerFunc: (returnObject: { color: string; }) => void) => Promise<PluginListenerHandle>
 ```
 
 Event fired after navigation bar color is changed
@@ -178,7 +178,7 @@ Event fired after navigation bar color is changed
 | **`event`**        | <code><a href="#navigationbarpluginevents">NavigationBarPluginEvents.COLOR_CHANGE</a></code> | The event   |
 | **`listenerFunc`** | <code>(returnObject: { color: string; }) =&gt; void</code>                                   | Callback    |
 
-**Returns:** <code><a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
 
 --------------------
 

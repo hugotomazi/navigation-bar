@@ -38,7 +38,7 @@ export interface NavigationBarPlugin {
   addListener(
     event: NavigationBarPluginEvents.SHOW,
     listenerFunc: () => void
-  ): PluginListenerHandle
+  ): Promise<PluginListenerHandle>
 
   /**
    * Event fired after navigation bar is hidden
@@ -48,7 +48,7 @@ export interface NavigationBarPlugin {
   addListener(
     event: NavigationBarPluginEvents.HIDE, 
     listenerFunc: () => void
-  ): PluginListenerHandle
+  ): Promise<PluginListenerHandle>
 
   /**
    * Event fired after navigation bar color is changed
@@ -58,7 +58,7 @@ export interface NavigationBarPlugin {
   addListener(
     event: NavigationBarPluginEvents.COLOR_CHANGE,
     listenerFunc: (returnObject: { color: string }) => void
-  ): PluginListenerHandle
+  ): Promise<PluginListenerHandle>
 }
 
 export interface ColorParameters {
